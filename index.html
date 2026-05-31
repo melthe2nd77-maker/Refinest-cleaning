@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refinest Cleaning | Treasure Coast's #1 Cleaning Service</title>
+  <meta name="description" content="Professional post-construction cleanup, move-out cleaning, trash out, and more. Serving the Treasure Coast. Call 863-260-3551 for a free quote!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#f0fdfa', 100: '#ccfbf1', 200: '#99f6e4',
+              300: '#5eead4', 400: '#2dd4bf', 500: '#14b8a6',
+              600: '#0d9488', 700: '#0f766e', 800: '#115e59', 900: '#134e4a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .mobile-menu.open { max-height: 400px; }
+  </style>
+</head>
+<body class="font-sans antialiased bg-white">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center">
+          <span class="text-white font-bold text-sm">RC</span>
+        </div>
+        <span class="font-bold text-xl text-gray-900">Refinest Cleaning</span>
+      </div>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#home" class="text-sm font-medium text-gray-600 hover:text-teal-600 transition-colors">Home</a>
+        <a href="#services" class="text-sm font-medium text-gray-600 hover:text-teal-600 transition-colors">Services</a>
+        <a href="#about" class="text-sm font-medium text-gray-600 hover:text-teal-600 transition-colors">About</a>
+        <a href="#testimonials" class="text-sm font-medium text-gray-600 hover:text-teal-600 transition-colors">Testimonials</a>
+        <a href="#booking" class="bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">Book Now</a>
+      </div>
+      <a href="tel:+18632603551" class="hidden md:flex items-center gap-1 text-sm text-teal-600 font-medium hover:text-teal-700">
+        📞 863-260-3551
+      </a>
+      <button onclick="toggleMenu()" class="md:hidden p-2 text-gray-600" id="menuBtn">☰</button>
+    </div>
+    <div class="mobile-menu md:hidden" id="mobileMenu">
+      <div class="flex flex-col gap-3 py-3 border-t border-gray-100">
+        <a href="#home" onclick="toggleMenu()" class="text-sm font-medium text-gray-700 py-2 border-b border-gray-100">Home</a>
+        <a href="#services" onclick="toggleMenu()" class="text-sm font-medium text-gray-700 py-2 border-b border-gray-100">Services</a>
+        <a href="#about" onclick="toggleMenu()" class="text-sm font-medium text-gray-700 py-2 border-b border-gray-100">About</a>
+        <a href="#testimonials" onclick="toggleMenu()" class="text-sm font-medium text-gray-700 py-2 border-b border-gray-100">Testimonials</a>
+        <a href="#booking" onclick="toggleMenu()" class="text-sm font-medium text-gray-700 py-2 border-b border-gray-100">Book Now</a>
+        <a href="tel:+18632603551" class="text-teal-600 font-medium text-sm py-2">📞 863-260-3551</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="relative min-h-screen flex items-center bg-gradient-to-br from-teal-50 via-white to-cyan-50 pt-16">
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-teal-100 rounded-full opacity-40 blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-100 rounded-full opacity-40 blur-3xl"></div>
+  </div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6 fade-in">
+        <span class="inline-block bg-teal-100 text-teal-700 border border-teal-200 text-sm font-medium px-3 py-1 rounded-full">⭐ Treasure Coast's Trusted Cleaning Professionals</span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+          The Refinest<br/>
+          <span class="text-teal-600">Clean You'll</span><br/>
+          Ever Experience
+        </h1>
+        <p class="text-lg text-gray-600 max-w-lg">From post-construction cleanup to move-out cleans — Refinest Cleaning handles the mess so Treasure Coast contractors and real estate agents can focus on closing deals.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#booking" class="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition-colors">Book a Free Quote →</a>
+          <a href="#services" class="inline-flex items-center justify-center border-2 border-teal-600 text-teal-600 hover:bg-teal-50 font-semibold px-8 py-3 rounded-lg text-base transition-colors">See All Services</a>
+        </div>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <div class="flex items-center gap-2 text-sm text-gray-600">✅ Insured &amp; Bonded</div>
+          <div class="flex items-center gap-2 text-sm text-gray-600">✅ Same-Day Available</div>
+          <div class="flex items-center gap-2 text-sm text-gray-600">✅ 100% Satisfaction</div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 fade-in">
+        <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center"><div class="text-3xl font-bold text-teal-600">500+</div><div class="text-sm text-gray-500 mt-1">Jobs Completed</div></div>
+            <div class="text-center"><div class="text-3xl font-bold text-teal-600">200+</div><div class="text-sm text-gray-500 mt-1">Happy Clients</div></div>
+            <div class="text-center"><div class="text-3xl font-bold text-teal-600">4.9★</div><div class="text-sm text-gray-500 mt-1">Average Rating</div></div>
+            <div class="text-center"><div class="text-3xl font-bold text-teal-600">48hr</div><div class="text-sm text-gray-500 mt-1">Avg Response</div></div>
+          </div>
+        </div>
+        <div class="bg-teal-600 rounded-2xl shadow-lg p-6 text-white">
+          <div class="flex gap-1 mb-2">⭐⭐⭐⭐⭐</div>
+          <p class="text-sm text-teal-50 italic mb-3">"Refinest Cleaning transformed our post-construction site. Spotless in one day — our client was absolutely thrilled!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 bg-teal-400 rounded-full flex items-center justify-center text-xs font-bold">MR</div>
+            <div><div class="text-sm font-semibold">Marcus R.</div><div class="text-xs text-teal-200">Treasure Coast Contractor</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-teal-600 font-semibold text-sm uppercase tracking-wider mb-3">What We Offer</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Services Built for Contractors &amp; Realtors</h2>
+      <p class="text-gray-500 max-w-xl mx-auto">High-ticket cleans that move fast. We specialize in the jobs your clients need done before listing, handing over keys, or opening for business.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Service cards -->
+      <div class="fade-in border border-gray-100 hover:border-teal-200 hover:shadow-lg transition-all duration-300 rounded-xl p-6 flex flex-col gap-4 cursor-pointer">
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-teal-50 text-2xl">🏗️</div>
+          <span class="text-xs font-medium px-2 py-1 rounded-full bg-teal-100 text-teal-700">Most Popular</span>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-gray-900 text-lg mb-2">Post-Construction Cleanup</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Deep clean after new builds or renovations. Dust, debris, and residue removal — ready for final walkthrough.</p>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+          <span class="font-bold text-teal-600">From $400</span>
+          <a href="#booking" class="text-sm text-teal-600 hover:text-teal-700 font-medium hover:underline">Book Now →</a>
+        </div>
+      </div>
+      <div class="fade-in border border-gray-100 hover:border-teal-200 hover:shadow-lg transition-all duration-300 rounded-xl p-6 flex flex-col gap-4 cursor-pointer">
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-blue-50 text-2xl">🏠</div>
+          <span class="text-xs font-medium px-2 py-1 rounded-full bg-blue-100 text-blue-700">Realtors Love This</span>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-gray-900 text-lg mb-2">Move-Out / Move-In Cleaning</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Full property clean for real estate agents and property managers. Increase rental appeal and pass inspection.</p>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+          <span class="font-bold text-teal-600">From $250</span>
+          <a href="#booking" class="text-sm text-teal-600 hover:text-teal-700 font-medium hover:underline">Book Now →</a>
+        </div>
+      </div>
+      <div class="fade-in border border-gray-100 hover:border-teal-200 hover:shadow-lg transition-all duration-300 rounded-xl p-6 flex flex-col gap-4 cursor-pointer">
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-orange-50 text-2xl">🚛</div>
+          <span></span>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-gray-900 text-lg mb-2">Trash Out Service</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Full junk and debris removal from foreclosures, evictions, or vacant properties. Fast turnaround.</p>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+          <span class="font-bold text-teal-600">From $300</span>
+          <a href="#booking" class="text-sm text-teal-600 hover:text-teal-700 font-medium hover:underline">Book Now →</a>
+        </div>
+      </div>
+      <div class="fade-in border border-gray-100 hover:border-teal-200 hover:shadow-lg transition-all duration-300 rounded-xl p-6 flex flex-col gap-4 cursor-pointer">
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-purple-50 text-2xl">🏢</div>
+          <span class="text-xs font-medium px-2 py-1 rounded-full bg-purple-100 text-purple-700">Recurring Contracts</span>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-gray-900 text-lg mb-2">Commercial Cleaning</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Office, retail, and commercial space cleaning on weekly, bi-weekly, or monthly contracts.</p>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+          <span class="font-bold text-teal-600">From $200</span>
+          <a href="#booking" class="text-sm text-teal-600 hover:text-teal-700 font-medium hover:underline">Book Now →</a>
+        </div>
+      </div>
+      <div class="fade-in border border-gray-100 hover:border-teal-200 hover:shadow-lg transition-all duration-300 rounded-xl p-6 flex flex-col gap-4 cursor-pointer">
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-cyan-50 text-2xl">💧</div>
+          <span></span>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-gray-900 text-lg mb-2">Pressure Washing</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Driveways, sidewalks, exteriors, and decks. Perfect for pre-listing prep or post-construction.</p>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+          <span class="font-bold text-teal-600">From $150</span>
+          <a href="#booking" class="text-sm text-teal-600 hover:text-teal-700 font-medium hover:underline">Book Now →</a>
+        </div>
+      </div>
+      <div class="fade-in border border-gray-100 hover:border-teal-200 hover:shadow-lg transition-all duration-300 rounded-xl p-6 flex flex-col gap-4 cursor-pointer">
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-green-50 text-2xl">🧹</div>
+          <span></span>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-gray-900 text-lg mb-2">General &amp; Maintenance Cleaning</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Standard housecleaning, post-renovation cleaning, floor care, and recurring maintenance visits.</p>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+          <span class="font-bold text-teal-600">From $120</span>
+          <a href="#booking" class="text-sm text-teal-600 hover:text-teal-700 font-medium hover:underline">Book Now →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Add-ons -->
+    <div class="mt-12 bg-teal-50 border border-teal-100 rounded-2xl p-6 fade-in">
+      <p class="text-teal-700 font-semibold text-sm uppercase tracking-wide mb-4">Add-On Services</p>
+      <div class="flex flex-wrap gap-3">
+        <div class="flex items-center gap-2 bg-white border border-teal-200 rounded-full px-4 py-2 text-sm"><span class="text-gray-700">Inside Fridge Clean</span><span class="font-bold text-teal-600">+$40</span></div>
+        <div class="flex items-center gap-2 bg-white border border-teal-200 rounded-full px-4 py-2 text-sm"><span class="text-gray-700">Inside Oven Clean</span><span class="font-bold text-teal-600">+$35</span></div>
+        <div class="flex items-center gap-2 bg-white border border-teal-200 rounded-full px-4 py-2 text-sm"><span class="text-gray-700">Laundry Folding</span><span class="font-bold text-teal-600">+$25</span></div>
+        <div class="flex items-center gap-2 bg-white border border-teal-200 rounded-full px-4 py-2 text-sm"><span class="text-gray-700">Window Cleaning</span><span class="font-bold text-teal-600">+$50</span></div>
+        <div class="flex items-center gap-2 bg-white border border-teal-200 rounded-full px-4 py-2 text-sm"><span class="text-gray-700">Cabinet Deep Clean</span><span class="font-bold text-teal-600">+$45</span></div>
+        <div class="flex items-center gap-2 bg-white border border-teal-200 rounded-full px-4 py-2 text-sm"><span class="text-gray-700">Garage Sweep</span><span class="font-bold text-teal-600">+$60</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+      <div class="space-y-6 fade-in">
+        <p class="text-teal-600 font-semibold text-sm uppercase tracking-wider">Our Mission</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Serving the Treasure Coast With Pride</h2>
+        <p class="text-gray-600 leading-relaxed">Refinest Cleaning was built for contractors and real estate agents on the Treasure Coast who need a cleaning partner they can actually count on. No no-shows, no half-done jobs, no excuses.</p>
+        <p class="text-gray-600 leading-relaxed">Our mission is simple: deliver the refinest clean possible on your schedule, so you can focus on what you do best — building, selling, and growing your business across Martin, St. Lucie, and Indian River County.</p>
+        <div class="flex gap-8 pt-4 border-t border-gray-200">
+          <div><div class="text-2xl font-bold text-teal-600">3+</div><div class="text-xs text-gray-500">Years in Business</div></div>
+          <div><div class="text-2xl font-bold text-teal-600">500+</div><div class="text-xs text-gray-500">Jobs Completed</div></div>
+          <div><div class="text-2xl font-bold text-teal-600">98%</div><div class="text-xs text-gray-500">Client Retention</div></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="fade-in bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-3 text-xl">🛡️</div>
+          <h3 class="font-semibold text-gray-900 mb-1">Fully Insured</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Every job is covered. Our team is insured and background-checked so you can book with complete confidence.</p>
+        </div>
+        <div class="fade-in bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-3 text-xl">👥</div>
+          <h3 class="font-semibold text-gray-900 mb-1">Vetted Professionals</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Our cleaners are experienced, trained, and personally vetted. We send the best to every Treasure Coast job.</p>
+        </div>
+        <div class="fade-in bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-3 text-xl">⚡</div>
+          <h3 class="font-semibold text-gray-900 mb-1">Fast Turnaround</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Same-day and next-day availability. We know deadlines matter in real estate and construction.</p>
+        </div>
+        <div class="fade-in bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-3 text-xl">❤️</div>
+          <h3 class="font-semibold text-gray-900 mb-1">Satisfaction Guarantee</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Not happy? We come back — free. Your satisfaction isn't a bonus, it's our standard.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-teal-600 font-semibold text-sm uppercase tracking-wider mb-3">Reviews</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">What the Treasure Coast Says</h2>
+      <div class="flex items-center justify-center gap-2 text-gray-500">
+        <span>⭐⭐⭐⭐⭐</span>
+        <span class="font-semibold text-gray-700">4.9/5</span>
+        <span>· 200+ verified reviews</span>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="fade-in border border-gray-100 hover:shadow-md transition-shadow rounded-xl p-6 flex flex-col gap-4">
+        <div>⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-600 text-sm leading-relaxed flex-1 italic">"Refinest Cleaning transformed our post-construction site overnight. Spotless finish — our client was absolutely thrilled. They're now our go-to for every build on the Treasure Coast."</p>
+        <div class="flex items-center gap-3 pt-2 border-t border-gray-100">
+          <div class="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">MR</div>
+          <div><p class="font-semibold text-gray-900 text-sm">Marcus R.</p><p class="text-xs text-gray-500">General Contractor · Stuart, FL</p></div>
+        </div>
+      </div>
+      <div class="fade-in border border-gray-100 hover:shadow-md transition-shadow rounded-xl p-6 flex flex-col gap-4">
+        <div>⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-600 text-sm leading-relaxed flex-1 italic">"I send every listing to Refinest before photos. The move-out cleans are incredible and they always make time for same-day requests. My clients notice the difference every single time."</p>
+        <div class="flex items-center gap-3 pt-2 border-t border-gray-100">
+          <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">TW</div>
+          <div><p class="font-semibold text-gray-900 text-sm">Tanya W.</p><p class="text-xs text-gray-500">Real Estate Agent · Port St. Lucie, FL</p></div>
+        </div>
+      </div>
+      <div class="fade-in border border-gray-100 hover:shadow-md transition-shadow rounded-xl p-6 flex flex-col gap-4">
+        <div>⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-600 text-sm leading-relaxed flex-1 italic">"We manage 12 units and Refinest handles all our turnover cleans. Fast, reliable, and they send before/after photos every time. Makes my job so much easier."</p>
+        <div class="flex items-center gap-3 pt-2 border-t border-gray-100">
+          <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">JK</div>
+          <div><p class="font-semibold text-gray-900 text-sm">James K.</p><p class="text-xs text-gray-500">Property Manager · Vero Beach, FL</p></div>
+        </div>
+      </div>
+      <div class="fade-in border border-gray-100 hover:shadow-md transition-shadow rounded-xl p-6 flex flex-col gap-4">
+        <div>⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-600 text-sm leading-relaxed flex-1 italic">"Hired them for a post-reno deep clean. They got into every corner — baseboards, inside cabinets, vents. Best money I ever spent. House looked completely brand new."</p>
+        <div class="flex items-center gap-3 pt-2 border-t border-gray-100">
+          <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">SL</div>
+          <div><p class="font-semibold text-gray-900 text-sm">Sandra L.</p><p class="text-xs text-gray-500">Homeowner · Jensen Beach, FL</p></div>
+        </div>
+      </div>
+      <div class="fade-in border border-gray-100 hover:shadow-md transition-shadow rounded-xl p-6 flex flex-col gap-4">
+        <div>⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-600 text-sm leading-relaxed flex-1 italic">"We use Refinest for all our commercial cleanups. Professional team, always on time, and the pricing is transparent with no hidden fees. Highly recommend to anyone in the area."</p>
+        <div class="flex items-center gap-3 pt-2 border-t border-gray-100">
+          <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">DP</div>
+          <div><p class="font-semibold text-gray-900 text-sm">David P.</p><p class="text-xs text-gray-500">Commercial Developer · Fort Pierce, FL</p></div>
+        </div>
+      </div>
+      <div class="fade-in border border-gray-100 hover:shadow-md transition-shadow rounded-xl p-6 flex flex-col gap-4">
+        <div>⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-600 text-sm leading-relaxed flex-1 italic">"My Airbnb went from 3 stars to 4.9 after I started using Refinest for turnovers. Guests always comment on how spotless it is. Worth every single penny!"</p>
+        <div class="flex items-center gap-3 pt-2 border-t border-gray-100">
+          <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm">MG</div>
+          <div><p class="font-semibold text-gray-900 text-sm">Maria G.</p><p class="text-xs text-gray-500">Airbnb Host · Hutchinson Island, FL</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="py-20 bg-gradient-to-br from-gray-50 to-teal-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-teal-600 font-semibold text-sm uppercase tracking-wider mb-3">Get Started</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Book Your Free Quote</h2>
+      <p class="text-gray-500 max-w-lg mx-auto">Fill out the form and we'll get back to you within 2 hours. No obligation, no pressure.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <!-- Contact Info -->
+      <div class="space-y-6 fade-in">
+        <h3 class="text-xl font-bold text-gray-900">Get in Touch</h3>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0 text-lg">📞</div>
+          <div><p class="text-sm font-semibold text-gray-700">Call or Text</p><a href="tel:+18632603551" class="text-sm text-teal-600 hover:underline">863-260-3551</a><p class="text-xs text-gray-400">Mon–Sat, 7am–7pm</p></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0 text-lg">📧</div>
+          <div><p class="text-sm font-semibold text-gray-700">Email Us</p><a href="mailto:Refinestcleaning@outlook.com" class="text-sm text-teal-600 hover:underline">Refinestcleaning@outlook.com</a><p class="text-xs text-gray-400">Reply within 2 hours</p></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0 text-lg">📍</div>
+          <div><p class="text-sm font-semibold text-gray-700">Service Area</p><p class="text-sm text-gray-900">Treasure Coast, FL</p><p class="text-xs text-gray-400">Martin, St. Lucie &amp; Indian River County</p></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0 text-lg">⏰</div>
+          <div><p class="text-sm font-semibold text-gray-700">Availability</p><p class="text-sm text-gray-900">Same &amp; Next-Day Available</p><p class="text-xs text-gray-400">Weekend slots open</p></div>
+        </div>
+        <div class="bg-teal-600 rounded-2xl p-5 text-white">
+          <p class="font-bold mb-3">Why Choose Refinest Cleaning?</p>
+          <div class="text-sm text-teal-50 space-y-2">
+            <div>✅ No upfront payment required</div>
+            <div>✅ Fully insured &amp; background-checked</div>
+            <div>✅ Before/after photos provided</div>
+            <div>✅ Referral rewards program</div>
+          </div>
+        </div>
+      </div>
+      <!-- Form -->
+      <div class="lg:col-span-2 fade-in">
+        <form id="bookingForm" onsubmit="submitForm(event)" class="bg-white rounded-2xl shadow-lg p-8 space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-medium text-gray-700 mb-1 block">Full Name *</label>
+              <input type="text" id="name" placeholder="Jane Smith" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent" />
+            </div>
+            <div>
+              <label class="text-sm font-medium text-gray-700 mb-1 block">Phone Number *</label>
+              <input type="tel" id="phone" placeholder="(863) 000-0000" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent" />
+            </div>
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-700 mb-1 block">Email Address *</label>
+            <input type="email" id="email" placeholder="you@example.com" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent" />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-medium text-gray-700 mb-1 block">Service Needed *</label>
+              <select id="service" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white">
+                <option value="">Select a service...</option>
+                <option>Post-Construction Cleanup</option>
+                <option>Move-Out / Move-In Cleaning</option>
+                <option>Trash Out Service</option>
+                <option>Commercial Cleaning</option>
+                <option>Pressure Washing</option>
+                <option>General Cleaning</option>
+                <option>Handyman Service</option>
+                <option>Maintenance Cleaning</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm font-medium text-gray-700 mb-1 block">Property Type</label>
+              <select id="propertyType" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white">
+                <option value="">Select type...</option>
+                <option>Residential Home</option>
+                <option>Condo / Apartment</option>
+                <option>Commercial Space</option>
+                <option>Office Building</option>
+                <option>Construction Site</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-medium text-gray-700 mb-1 block">Approx. Square Footage</label>
+              <select id="sqft" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white">
+                <option value="">Size of property...</option>
+                <option>Under 1,000 sq ft</option>
+                <option>1,000–2,000 sq ft</option>
+                <option>2,000–3,000 sq ft</option>
+                <option>3,000–5,000 sq ft</option>
+                <option>Over 5,000 sq ft</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-sm font-medium text-gray-700 mb-1 block">Preferred Date *</label>
+              <input type="date" id="date" required class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent" />
+            </div>
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-700 mb-1 block">Additional Details</label>
+            <textarea id="message" rows="3" placeholder="Tell us more — address, special requests, number of rooms, anything we should know." class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none"></textarea>
+          </div>
+          <button type="submit" id="submitBtn" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 rounded-lg text-base transition-colors">
+            Request My Free Quote →
+          </button>
+          <p class="text-xs text-center text-gray-400">No spam. No obligation. We'll call or text you at 863-260-3551 within 2 hours.</p>
+        </form>
+        <div id="successMsg" class="hidden bg-white rounded-2xl shadow-lg p-12 flex flex-col items-center justify-center text-center">
+          <div class="text-6xl mb-6">✅</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Request Received!</h3>
+          <p class="text-gray-500 max-w-sm mb-2">The Refinest Cleaning team will reach out within 2 hours with your custom quote.</p>
+          <p class="text-sm text-gray-400 mb-6">Questions? Call or text us at <a href="tel:+18632603551" class="text-teal-600 font-medium">863-260-3551</a></p>
+          <button onclick="resetForm()" class="border-2 border-teal-600 text-teal-600 hover:bg-teal-50 font-semibold px-6 py-2 rounded-lg transition-colors">Submit Another Request</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-300 py-12">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+      <div class="space-y-4 lg:col-span-2">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center"><span class="text-white font-bold text-sm">RC</span></div>
+          <span class="font-bold text-xl text-white">Refinest Cleaning</span>
+        </div>
+        <p class="text-sm text-gray-400 max-w-xs leading-relaxed">Professional cleaning for contractors, real estate agents, and property managers across the Treasure Coast. Fast, reliable, and fully insured.</p>
+        <div class="space-y-2 text-sm">
+          <a href="tel:+18632603551" class="flex items-center gap-2 hover:text-teal-400 transition-colors">📞 863-260-3551</a>
+          <a href="mailto:Refinestcleaning@outlook.com" class="flex items-center gap-2 hover:text-teal-400 transition-colors">📧 Refinestcleaning@outlook.com</a>
+          <span class="flex items-center gap-2">📍 Treasure Coast · Martin, St. Lucie &amp; Indian River County</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-4">Services</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#services" class="hover:text-teal-400 transition-colors">Post-Construction Cleanup</a></li>
+          <li><a href="#services" class="hover:text-teal-400 transition-colors">Move-Out Cleaning</a></li>
+          <li><a href="#services" class="hover:text-teal-400 transition-colors">Trash Out Service</a></li>
+          <li><a href="#services" class="hover:text-teal-400 transition-colors">Commercial Cleaning</a></li>
+          <li><a href="#services" class="hover:text-teal-400 transition-colors">Pressure Washing</a></li>
+          <li><a href="#services" class="hover:text-teal-400 transition-colors">Handyman Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#home" class="hover:text-teal-400 transition-colors">Home</a></li>
+          <li><a href="#about" class="hover:text-teal-400 transition-colors">About Us</a></li>
+          <li><a href="#testimonials" class="hover:text-teal-400 transition-colors">Testimonials</a></li>
+          <li><a href="#booking" class="hover:text-teal-400 transition-colors">Book a Quote</a></li>
+        </ul>
+        <div class="mt-6">
+          <h4 class="font-semibold text-white mb-3">Hours</h4>
+          <p class="text-sm text-gray-400">Mon – Sat: 7am – 7pm</p>
+          <p class="text-sm text-gray-400">Sunday: By Appointment</p>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+      <p>© 2025 Refinest Cleaning. All rights reserved. · Treasure Coast, FL</p>
+      <p>Insured · Bonded · Background Checked</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.getElementById('menuBtn');
+    menu.classList.toggle('open');
+    btn.textContent = menu.classList.contains('open') ? '✕' : '☰';
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Form submit
+  function submitForm(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      document.getElementById('bookingForm').classList.add('hidden');
+      document.getElementById('successMsg').classList.remove('hidden');
+      document.getElementById('successMsg').style.display = 'flex';
+      document.getElementById('successMsg').style.flexDirection = 'column';
+    }, 1500);
+  }
+
+  function resetForm() {
+    document.getElementById('bookingForm').classList.remove('hidden');
+    document.getElementById('bookingForm').reset();
+    document.getElementById('successMsg').classList.add('hidden');
+    document.getElementById('submitBtn').textContent = 'Request My Free Quote →';
+    document.getElementById('submitBtn').disabled = false;
+  }
+</script>
+</body>
+</html>
